@@ -42,7 +42,7 @@
                 <div class="control-group ">
                     <label class="control-label" for="textarea2">Content </label>
                     <div class="controls">
-                        <textarea class="cleditor" name="content" rows="3" value="{{ $posts->content}}" required></textarea>
+                        <textarea class="cleditor" name="content" rows="3" value="" required>{{ $posts->content}}</textarea>
                     </div>
 
                 </div>
@@ -70,64 +70,6 @@
 </div><!--/span-->
 </div><!--/row-->
 </div><!--/row-->
-
-  {{--  <script>
-    $(document).ready(function() {
-        $('#categorySelect').on('change', function() {
-            var category_id = $(this).val();
-            if (category_id) {
-                $.ajax({
-                    url: '{{ route("get-subcategories", ":category_id") }}'.replace(':category_id', category_id),
-
-                    type: 'GET',
-                    dataType: 'json',
-                    success: function(data) {
-                        $('#subcategorySelect').empty();
-                        $('#subcategorySelect').append('<option value="">Select Subcategory</option>');
-                        $.each(data, function(key, value) {
-                            $('#subcategorySelect').append('<option value="' + value.id + '">' + value.subcategory_bn + '</option>');
-                        });
-
-                    }
-                });
-            } else {
-                alert("danger");
-
-            }
-        });
-    });
-</script>  --}}
-             // District section
-{{--
- <script>
-    $(document).ready(function() {
-        $('#districtSelect').on('change', function() {
-            var dis_id = $(this).val();
-            if (dis_id) {
-                $.ajax({
-                    url: '{{ route("get-subdistricts", ":dis_id") }}'.replace(':dis_id', dis_id),
-                    type: 'GET',
-                    dataType: 'json',
-                    success: function(data) {
-                        $('#subdistrictSelect').empty();
-                        $('#subdistrictSelect').append('<option value="">Select Subdistrict</option>');
-                        $.each(data, function(key, value) {
-                            $('#subdistrictSelect').append('<option value="' + value.id + '">' + value.subdistrict_bn + '</option>');
-                        });
-                    }
-                });
-            } else {
-                $('#subdistrictSelect').empty();
-                $('#subdistrictSelect').append('<option value="">Select Subdistrict</option>');
-            }
-        });
-    });
-</script>  --}}
-
-
-
-
-
 
 @endsection
 
